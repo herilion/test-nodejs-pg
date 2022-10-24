@@ -10,7 +10,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/table', (req, res) => {
-    res.render('views/table');
+    res.render('table');  
 })
 
 app.listen(port, () => {
