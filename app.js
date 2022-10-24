@@ -9,6 +9,10 @@ app.get('/', (req, res) => {
     res.end('Hello Word')
 });
 
+app.get('/table', (req, res) => {
+    res.render('table');  
+})
+
 app.listen(port, () => {
     console.log(`Fait avec succes au ${port} `);
 
