@@ -1,12 +1,23 @@
 {
   "name": "crud",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/herilion/test-nodejs-pg.git"
+  },
+  "bugs": {
+    "url": "https://github.com/herilion/test-nodejs-pg/issues"
+  },
+  "homepage": "https://github.com/herilion/test-nodejs-pg#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }
