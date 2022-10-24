@@ -5,6 +5,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "type": "module",
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -18,7 +19,9 @@
   "homepage": "https://github.com/herilion/test-nodejs-pg#readme",
   "description": "",
   "dependencies": {
+    "dotenv": "^16.0.3",
     "ejs": "^3.1.8",
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "pg": "^8.8.0"
   }
 }
