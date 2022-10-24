@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire</title>
+</head>
+
+<body>
+    <form method="POST" action="/saveform">
+        <div class="input-group">
+            <label for="nom">Prenom</label>
+            <input id="nom" placeholder="Votre prenom ici" type="text">
+        </div>
+        <div class="input-group">
+            <label for="nom" class="label">Nom</label>
+            <input class="input-prenom" placeholder="Votre nom ici" type="text">
+        </div>
+        <div class="input-group">
+            <label for="sexe" class="label">Sexe</label>
+            <select name="sexe" id="sexe">
+                <option value="M" selected>Homme</option>
+                <option value="F">Femme</option>
+            </select>
+        </div>
+        <button type="submit">Save</button>
+    </form>
+</body>
+
+</html>
