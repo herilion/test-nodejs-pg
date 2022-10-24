@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="33px" height="32.999992px" viewBox="0 0 33 32.999992" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <path d="M0 0L33 0L33 33L0 33L0 0Z" id="path_1" />
+    <clipPath id="mask_1">
+      <use xlink:href="#path_1" />
+    </clipPath>
+  </defs>
+  <g id="delete">
+    <path d="M0 0L33 0L33 33L0 33L0 0Z" id="Arrière-plan" fill="#FFFFFF" fill-opacity="0" fill-rule="evenodd" stroke="none" />
+    <g id="Group" transform="translate(4.4365506 3.2338023)">
+      <path d="M2.27181 5.63059L3.52522 25.2104" id="Ligne" fill="none" fill-rule="evenodd" stroke="#130B7A" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M21.8635 5.58649L20.6101 25.1663" id="Ligne-Copy" fill="none" fill-rule="evenodd" stroke="#130B7A" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M3.52518 25.2104C3.52518 25.9034 4.08744 26.4664 4.77866 26.4664" id="Forme" fill="none" stroke="#130B7A" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M4.77864 26.4664L19.3491 26.4664" id="Ligne" fill="none" fill-rule="evenodd" stroke="#130B7A" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M19.3491 26.4664C20.0404 26.4664 20.6017 25.9034 20.6017 25.2104" id="Forme" fill="none" stroke="#130B7A" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M7425.51 8435.09L7797.99 2626.5L1986.23 2626.5" id="Polygone" fill="none" fill-rule="evenodd" stroke="#130B7A" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M24.1269 4.42042C24.1269 5.08431 23.5894 5.62261 22.9265 5.62261" id="Forme" fill="none" stroke="#130B7A" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M22.9265 5.6226L1.20044 5.6226" id="Ligne" fill="none" fill-rule="evenodd" stroke="#130B7A" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M1.20041 5.62261C0.53922 5.62261 0 5.08431 0 4.42042" id="Forme" fill="none" stroke="#130B7A" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M0 4.42042C0 3.75916 0.53922 3.22001 1.20041 3.22001" id="Forme" fill="none" stroke="#130B7A" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M1.20044 3.21994L22.9265 3.21994" id="Ligne" fill="none" fill-rule="evenodd" stroke="#130B7A" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M22.9265 3.21994C23.5894 3.21994 24.1269 3.75916 24.1269 4.42035" id="Forme" fill="none" stroke="#130B7A" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M15.8494 3.20054L15.8494 1.31941" id="Ligne" fill="none" fill-rule="evenodd" stroke="#130B7A" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M15.8494 1.3194C15.8494 0.628121 15.2881 0.065999 14.5977 0.065999" id="Forme" fill="none" stroke="#130B7A" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M14.5977 0.066L9.53084 0.066" id="Ligne" fill="none" fill-rule="evenodd" stroke="#130B7A" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M9.53089 0.065999C8.83875 0.065999 8.27828 0.628187 8.27828 1.3194" id="Forme" fill="none" stroke="#130B7A" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M1454.15 126.542L1454.15 180.158L2322.68 180.158" id="Polygone" fill="none" fill-rule="evenodd" stroke="#130B7A" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M6.54128 8.13655L6.54128 23.5662M10.2221 8.13655L10.2221 23.5662M13.9065 8.13655L13.9065 23.5662M17.5855 8.13655L17.5855 23.5662" id="Group" fill="none" stroke="#130B7A" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    </g>
+  </g>
+</svg>
