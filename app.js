@@ -16,6 +16,9 @@ app.get('/', (req, res) => {
 app.get('/table', (req, res) => {
     res.render('table');
 })
+app.get('/addform', (req, res) => {
+    res.render('addform');
+})
 
 app.listen(port, () => {
     console.log(`Fait avec succes au ${port} `);
