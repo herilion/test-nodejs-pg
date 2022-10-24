@@ -18,6 +18,7 @@
   "homepage": "https://github.com/herilion/test-nodejs-pg#readme",
   "description": "",
   "dependencies": {
+    "ejs": "^3.1.8",
     "express": "^4.18.2"
   }
 }
