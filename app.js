@@ -24,50 +24,66 @@ client
 const app = express();
 const port = process.env.PORT || 4000
 
-app.use(express.static('public'));
+app
+    .use(express.static('public'))
+    .use(express.urlencoded());
 
-app.set('view engine', 'ejs');
-app.set('views', 'views');
+app
+    .set('view engine', 'ejs')
+    .set('views', 'views');
 
-app.get('/', (req, res) => {
-    res.end('Hello Word')
-});
-
-app.get('/table', (req, res) => {
-    client
-        .query('SELECT * FROM persona')
-        .then(rep => {
-            res.render('table', { array: rep.rows })
-        })
-        .catch(e => console.log('error'));
-})
-app.get('/addform', (req, res) => {
-    res.render('addform');
-})
-app.get('/updateform/:id', (req, res) => {
-    if (isNaN(req.params.id)) res.redirect('/table');
-    else {
+app
+    .get('/', (req, res) => {
+        res.end('Hello Word')
+    })
+    .get('/table', (req, res) => {
         client
-            .query("SELECT * FROM persona WHERE id=$1", [req.params.id])
-            .then(personas => {
-                if (personas.rows.length == 0) res.redirect('/table');
-                else
-                    res.render('updateform', { persona: personas.rows[0] });
+            .query('SELECT * FROM persona')
+            .then(rep => {
+                res.render('table', { array: rep.rows })
             })
-            .catch(err => res.redirect('/table'))
-    }
-})
-app.get('/delete/:id', (req, res) => {
-    if (isNaN(req.params.id)) res.redirect('/table');
-    else {
-        client
-            .query("DELETE FROM persona WHERE id=$1", [req.params.id])
-            .then(() => {
-                res.redirect('/table');
-            })
-            .catch(err => res.redirect('/table'))
-    }
-})
+            .catch(e => console.log('error'));
+    })
+    .get('/addform', (req, res) => {
+        res.render('addform');
+    })
+    .get('/updateform/:id', (req, res) => {
+        if (isNaN(req.params.id)) res.redirect('/table');
+        else {
+            client
+                .query("SELECT * FROM persona WHERE id=$1", [req.params.id])
+                .then(personas => {
+                    if (personas.rows.length == 0) res.redirect('/table');
+                    else
+                        res.render('updateform', { persona: personas.rows[0] });
+                })
+                .catch(err => res.redirect('/table'))
+        }
+    })
+    .get('/update', (req, res) => {
+        if (isNaN(req.params.id)) res.redirect('/table');
+        else {
+            client
+                .query("UPDATE persona SET nom=$1, prenom=$2, genre=$3  WHERE id=$4", 
+                    [req.body.nom || '', req.body.prenom || '', req.body.sexe || 'M',req.params.id]
+                )
+                .then(() => {
+                    res.redirect('/table');
+                })
+                .catch(err => res.redirect('/table'))
+        }
+    })
+    .get('/delete/:id', (req, res) => {
+        if (isNaN(req.params.id)) res.redirect('/table');
+        else {
+            client
+                .query("DELETE FROM persona WHERE id=$1", [req.params.id])
+                .then(() => {
+                    res.redirect('/table');
+                })
+                .catch(err => res.redirect('/table'))
+        }
+    })
 
 app.listen(port, () => {
     console.log(`Fait avec succes au ${port} `);
