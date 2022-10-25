@@ -11,49 +11,9 @@
 </head>
 
 <body>
-<<<<<<< HEAD
-   <table class="container rounded">
-    <thead class="shadow p-3 mb-5 bg-white rounded ml-1 ">
-        <tr class="">
-            <th>Nø</th>
-            <th>NOM</th>
-            <th>PRENOM</th>
-            <th>EMAIL</th>
-            <th>GENRE</th>
-            <th>ACTION</th>
-        </tr>
-    </thead>
-    <tbody class="shadow-lg p-3 mb-5 bg-white rounded">
-        <tr class="shadow p-3 mb-5 bg-white rounded">
-            <td>01</td>
-            <td>H‚ritier</td>
-            <td>Lionge</td>
-            <td>heritierlionge@gmail.com</td>
-            <td>M</td>
-            <td><img src="/images/delete.svg" alt="delete"/><span><img src="/images/update.svg" alt="update" srcset=""></span></td>
-        </tr>
-        <tr class="shadow p-3 mb-5 bg-white rounded">
-            <td>02</td>
-            <td>Alexandre</td>
-            <td>Chambo</td>
-            <td>Alexandrechambo@gmail.com</td>
-            <td>M</td>
-            <td><img src="/images/delete.svg" alt="delete"/><span><img src="/images/update.svg" alt="update" srcset=""></span></td>
-        </tr>
-        <tr class="shadow p-3 mb-5 bg-white rounded">
-            <td>03</td>
-            <td>Annette</td>
-            <td>Bwemere</td>
-            <td>annettebweme@gmail.com</td>
-            <td>M</td>
-            <td><img src="/images/delete.svg" alt="delete"/><span><img src="/images/update.svg" alt="update" srcset=""></span></td>
-        </tr>
-    </tbody>
-   </table> 
-=======
     <table class="container rounded">
-        <thead class="shadow p-3 mb-5 bg-white rounded ml-1">
-            <tr>
+        <thead class="shadow p-3 mb-5 bg-white rounded ml-1 ">
+            <tr class="">
                 <th>NUMERO</th>
                 <th>NOM</th>
                 <th>PRENOM</th>
@@ -63,42 +23,31 @@
             </tr>
         </thead>
         <tbody class="shadow-lg p-3 mb-5 bg-white rounded">
-            <tr class="shadow p-3 mb-5 bg-white rounded">
-                <td>01</td>
-                <td>Heritier</td>
-                <td>Lionge</td>
-                <td>heritierlionge@gmail.com</td>
-                <td>M</td>
-                <td>
-                    <img src="/images/delete.svg" alt="delete" />
-                    <img src="/images/update.svg" alt="update" />
-                </td>
-            </tr>
-            <tr class="shadow p-3 mb-5 bg-white rounded">
-                <td>02</td>
-                <td>Alexandre</td>
-                <td>Chambo</td>
-                <td>Alexandrechambo@gmail.com</td>
-                <td>M</td>
-                <td>
-                    <img src="/images/delete.svg" alt="delete" />
-                    <img src="/images/update.svg" alt="update" />
-                </td>
-            </tr>
-            <tr class="shadow p-3 mb-5 bg-white rounded">
-                <td>03</td>
-                <td>Annette</td>
-                <td>Bwemere</td>
-                <td>annettebweme@gmail.com</td>
-                <td>M</td>
-                <td>
-                    <img src="/images/delete.svg" alt="delete" />
-                    <img src="/images/update.svg" alt="update" />
-                </td>
-            </tr>
+            <% for( let i=0; i < array.length; i++ ) { %>
+                <tr class="shadow p-3 mb-5 bg-white rounded">
+                    <td>
+                        <%=array[i].id%>
+                    </td>
+                    <td>
+                        <%=array[i].prenom%>
+                    </td>
+                    <td>
+                        <%=array[i].nom%>
+                    </td>
+                    <td>
+                        <%=array[i].sexe%>
+                    </td>
+                    <td>
+                        <%=array[i].email%>
+                    </td>
+                    <td><img src="/images/delete.svg" alt="delete" /><span><img src="/images/update.svg" alt="update"
+                                srcset=""></span>
+                    </td>
+                </tr>
+                <% } %>
+
         </tbody>
     </table>
->>>>>>> origin
 </body>
 
 </html>

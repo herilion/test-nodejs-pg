@@ -17,8 +17,8 @@ const client = new Client({
 // Connexion à la base de données
 client
     .connect()
-    .then( con => console.log('Connexion reussie'))
-    .catch( err => console.log(err));
+    .then(con => console.log('Connexion reussie'))
+    .catch(err => console.log(err));
 
 // Initialisation de Express
 const app = express();
@@ -34,13 +34,18 @@ app.get('/', (req, res) => {
 });
 
 app.get('/table', (req, res) => {
-    res.render('table');
+    client
+        .query('SELECT * FROM persona')
+        .then(rep => {
+            res.render('table', { array: rep.rows })
+        })
+        .catch(e => console.log('error'));
 })
 app.get('/addform', (req, res) => {
     res.render('addform');
 })
 app.get('/updateform/:id', (req, res) => {
-    if(isNaN(req.params.id)) res.redirect('/table');
+    if (isNaN(req.params.id)) res.redirect('/table');
     else {
         client
             .query("SELECT * FROM persona WHERE id=$1", [req.params.id])
@@ -51,7 +56,7 @@ app.get('/updateform/:id', (req, res) => {
             })
             .catch(err => res.redirect('/table'))
     }
-    
+
 })
 
 app.listen(port, () => {
