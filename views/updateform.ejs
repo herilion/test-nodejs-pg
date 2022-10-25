@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update persona</title>
+</head>
+<body>
+    <form action="" method="post">
+        <div class="input-group">
+            <label for="nom">Prenom</label>
+            <input 
+                id="nom" 
+                placeholder="Votre prenom ici" 
+                type="text" 
+                value=<%= persona.prenom %>
+            >
+        </div>
+
+        <div class="input-group">
+            <label for="nom" class="label">Nom</label>
+            <input 
+                class="input-prenom" 
+                placeholder="Votre nom ici" 
+                type="text" 
+                value=<%= persona.nom %>
+            >
+        </div>
+
+        <div class="input-group">
+            <label for="sexe" class="label">Genre</label>
+            <select name="sexe" id="sexe">
+                <option 
+                    value="M" 
+                    <% if(persona.genre == 'M') { %>
+                    selected
+                    <% } %> 
+                >Homme</option>
+                <option 
+                    value="F"
+                    <% if (persona.genre == 'F') { %>
+                     selected
+                    <% } %>
+                >Femme</option>
+            </select>
+        </div>
+
+        <button type="submit">Save</button>
+    </form>
+</body>
+</html>
