@@ -38,7 +38,7 @@ app
     })
     .get('/table', (req, res) => {
         client
-            .query('SELECT * FROM persona')
+            .query('SELECT * FROM persona ORDER BY id')
             .then(rep => {
                 res.render('table', { array: rep.rows })
             })
@@ -60,12 +60,12 @@ app
                 .catch(err => res.redirect('/table'))
         }
     })
-    .get('/update', (req, res) => {
-        if (isNaN(req.params.id)) res.redirect('/table');
+    .post('/update', (req, res) => {
+        if (isNaN(req.body.id)) res.redirect('/table');
         else {
             client
                 .query("UPDATE persona SET nom=$1, prenom=$2, genre=$3  WHERE id=$4", 
-                    [req.body.nom || '', req.body.prenom || '', req.body.sexe || 'M',req.params.id]
+                    [req.body.nom || '', req.body.prenom || '', req.body.sexe || 'M',req.body.id]
                 )
                 .then(() => {
                     res.redirect('/table');
