@@ -35,16 +35,25 @@
                         <%=array[i].nom%>
                     </td>
                     <td>
-                        <%=array[i].sexe%>
+                        <%=array[i].genre%>
                     </td>
                     <td>
                         <%=array[i].email%>
                     </td>
-                    <td><img src="/images/delete.svg" alt="delete" /><span><img src="/images/update.svg" alt="update"
-                                srcset=""></span>
+                    <td>
+                        <span>
+                            <a href=<%="/delete/" + array[i].id %> >
+                                <img src="/images/delete.svg" alt="delete" />
+                            </a>
+                        </span>
+                        <span>
+                            <a href=<%="/updateform/" + array[i].id %> >
+                                <img src="/images/update.svg" alt="update" />
+                            </a>
+                        </span>
                     </td>
                 </tr>
-                <% } %>
+            <% } %>
 
         </tbody>
     </table>

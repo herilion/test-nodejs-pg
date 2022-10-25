@@ -56,7 +56,17 @@ app.get('/updateform/:id', (req, res) => {
             })
             .catch(err => res.redirect('/table'))
     }
-
+})
+app.get('/delete/:id', (req, res) => {
+    if (isNaN(req.params.id)) res.redirect('/table');
+    else {
+        client
+            .query("DELETE FROM persona WHERE id=$1", [req.params.id])
+            .then(() => {
+                res.redirect('/table');
+            })
+            .catch(err => res.redirect('/table'))
+    }
 })
 
 app.listen(port, () => {
