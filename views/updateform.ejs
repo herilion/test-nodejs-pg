@@ -7,11 +7,12 @@
     <title>Update persona</title>
 </head>
 <body>
-    <form action="" method="post">
+    <form action="/update" method="post">
         <div class="input-group">
             <label for="nom">Prenom</label>
             <input 
-                id="nom" 
+                name="prenom"
+                id="prenom" 
                 placeholder="Votre prenom ici" 
                 type="text" 
                 value=<%= persona.prenom %>
@@ -21,6 +22,7 @@
         <div class="input-group">
             <label for="nom" class="label">Nom</label>
             <input 
+                name="nom"
                 class="input-prenom" 
                 placeholder="Votre nom ici" 
                 type="text" 
@@ -45,8 +47,8 @@
                 >Femme</option>
             </select>
         </div>
-
-        <button type="submit">Save</button>
+        <input type="hidden" name="id" value=<%= persona.id %>  >
+        <button type="submit">Update</button>
     </form>
 </body>
 </html>
