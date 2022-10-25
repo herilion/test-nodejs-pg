@@ -39,6 +39,20 @@ app.get('/table', (req, res) => {
 app.get('/addform', (req, res) => {
     res.render('addform');
 })
+app.get('/updateform/:id', (req, res) => {
+    if(isNaN(req.params.id)) res.redirect('/table');
+    else {
+        client
+            .query("SELECT * FROM persona WHERE id=$1", [req.params.id])
+            .then(personas => {
+                if (personas.rows.length == 0) res.redirect('/table');
+                else
+                    res.render('updateform', { persona: personas.rows[0] });
+            })
+            .catch(err => res.redirect('/table'))
+    }
+    
+})
 
 app.listen(port, () => {
     console.log(`Fait avec succes au ${port} `);
