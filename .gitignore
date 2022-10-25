@@ -1,2 +1,6 @@
-node_modules
+# environnement vars
 .env
+# Node package
+node_modules
+
+# end
