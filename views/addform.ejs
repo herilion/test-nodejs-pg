@@ -12,32 +12,18 @@
 
 <body>
     <form method="POST" action="/saveform" class="container">
-        <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="Username" name="usrname">
-        </div>
-        <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="Your Email" name="email">
-          </div>
-        <div class="input-group form-group form-control">
-            <label for="sexe" class="label">Sexe</label>
-            <select name="sexe" id="sexe" class="custom-select">
-                <option value="M" selected>Homme</option>
-                <option value="F">Femme</option>
-            </select>
-    <link rel="stylesheet" href="/public/css/style.css">
-</head>
-
-<body>
-    <form method="POST" action="/saveform">
-        <div class="container">
-            <div class="input-group">
-                <label for="nom">Prenom</label>
-                <input id="nom" placeholder="Votre prenom ici" type="text">
+            <div class="form-group row">
+                <label for="inputEmail3" class="col-sm-2 col-form-label">Nom</label>
+                <div class="col-sm-10">
+                  <input type="email" class="form-control" id="inputEmail3" placeholder="Ton nom Ici">
+                </div>
             </div>
-            <div class="input-group">
-                <label for="nom" class="label">Nom</label>
-                <input class="input-prenom" placeholder="Votre nom ici" type="text">
-            </div>
+            <div class="form-group row">
+                <label for="Prenom" class="col-sm-2 col-form-label">Prenom</label>
+                <div class="col-sm-10">
+                  <input type="password" class="form-control" id="inputPassword3" placeholder="Ton Prenom ici">
+                </div>
+            </div>   
             <div class="input-group">
                 <label for="sexe" class="label">Sexe</label>
                 <select name="sexe" id="sexe">
@@ -45,7 +31,6 @@
                     <option value="F">Femme</option>
                 </select>
             </div>
-        </div>
         <button type="submit" class="btn btn-success">Save</button>
     </form>
 </body>
