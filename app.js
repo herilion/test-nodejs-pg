@@ -64,14 +64,25 @@ app
         if (isNaN(req.body.id)) res.redirect('/table');
         else {
             client
-                .query("UPDATE persona SET nom=$1, prenom=$2, genre=$3  WHERE id=$4", 
-                    [req.body.nom || '', req.body.prenom || '', req.body.sexe || 'M',req.body.id]
+                .query("UPDATE persona SET nom=$1, prenom=$2, genre=$3  WHERE id=$4",
+                    [req.body.nom || '', req.body.prenom || '', req.body.sexe || 'M', req.body.id]
                 )
                 .then(() => {
                     res.redirect('/table');
                 })
                 .catch(err => res.redirect('/table'))
         }
+    })
+    .post('/saveform', (req, res) => {
+        if (req.body.prenom && req.body.nom && req.body.genre && req.body.email) {
+            client
+                .query("INSERT INTO persona(prenom,nom,genre,email) VALUES($1,$2,$3,$4)",
+                    [req.body.prenom, req.body.nom, req.body.genre, req.body.email])
+                .then(() => {
+                    res.redirect('/table')
+                })
+                .catch(err => res.redirect('/addform'))
+        } else res.redirect('/addform')
     })
     .get('/delete/:id', (req, res) => {
         if (isNaN(req.params.id)) res.redirect('/table');
