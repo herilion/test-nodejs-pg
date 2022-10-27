@@ -26,13 +26,9 @@ const port = process.env.PORT || 4000
 
 app
     .use(express.static('public'))
-    .use(express.urlencoded());
-
-app
+    .use(express.urlencoded())
     .set('view engine', 'ejs')
-    .set('views', 'views');
-
-app
+    .set('views', 'views')
     .get('/', (req, res) => {
         res.end('Hello Word')
     })

@@ -17,7 +17,7 @@
     "url": "https://github.com/herilion/test-nodejs-pg/issues"
   },
   "homepage": "https://github.com/herilion/test-nodejs-pg#readme",
-  "description": "",
+  "description": "<!-- markdownlint-disable no-inline-html --> <h1 align='center' >test-nodejs-pg</h1>",
   "dependencies": {
     "dotenv": "^16.0.3",
     "ejs": "^3.1.8",
